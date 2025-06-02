@@ -121,5 +121,10 @@ public class stream1
                         () -> new TreeMap<>(), // takes no input and returns a new TreeMap & Stores key-value pairs.Keeps keys sorted in natural order (or using a custom comparator)
                         Collectors.toList()));
        p.forEach((key,value)-> System.out.println(key +":"+value));
+
+       List<Integer> list=Arrays.asList(25,26,70,54);
+       list.stream()
+               .filter(s->s%2==0)
+               .forEach(System.out::println);
     }
 }
